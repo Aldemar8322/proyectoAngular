@@ -1,0 +1,18 @@
+<header class="text-center my-5">
+    <h1>SUPER MARIO BROS</h1>
+    <p>Personajes / Actores</p>
+</header>
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+    @for(elemento of todosLosDatos; track elemento.id){
+        <div class="card" style="width: 18rem;">
+            <img src="{{elemento.image}}" class="card-img-top" alt="foto de {{elemento.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{elemento.name}}</h5>
+                <p class="card-text">Interpretado por: {{elemento.character}}</p>
+            </div>
+        </div>
+    }
+</main>
+<footer class="text-center my-5">&copy; 2024</footer>
+
+<!-- <router-outlet></router-outlet> -->
