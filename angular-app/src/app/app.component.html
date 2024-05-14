@@ -1,18 +1,24 @@
 <header class="text-center my-5">
-    <h1>SUPER MARIO BROS</h1>
-    <p>Personajes / Actores</p>
+    <h1>
+        <h3 class="container d-flex my-5" href="https://fontmeme.com/es/fuente-de-super-mario/"><img src="https://fontmeme.com/permalink/240514/b0b08f21316bba31d467e12d2fe3aff8.png" alt="fuente-de-super-mario" border="0"></h3>
+    </h1>
+    <h2>
+        <span>SERIE DEL JUEGO / PERSONAJES</span>
+    </h2>
 </header>
-<main class="container d-flex flex-wrap justify-content-center gap-5">
+<main class="container d-flex flex-wrap justify-content-center gap-3">
     @for(elemento of todosLosDatos; track elemento.id){
-        <div class="card" style="width: 18rem;">
-            <img src="{{elemento.image}}" class="card-img-top" alt="foto de {{elemento.name}}">
+        <div class="card text-center mb-3" style="width: 18rem;">
+            <img src="{{elemento.image}}" class="card-img-top" height="350rem" alt="foto de {{elemento.name}}">
             <div class="card-body">
-                <h5 class="card-title">{{elemento.name}}</h5>
-                <p class="card-text">Interpretado por: {{elemento.character}}</p>
+                <h4 class="card-title">{{elemento.name}}</h4>
+                <span>PERSONAJE: {{elemento.character}}</span>
             </div>
         </div>
     }
 </main>
-<footer class="text-center my-5">&copy; 2024</footer>
+<footer class="text-center my-5">
+    <span>&copy; 2024</span>
+</footer>
 
 <!-- <router-outlet></router-outlet> -->
