@@ -10,6 +10,7 @@
 ## API UTILIZADA:
 - "https://www.amiiboapi.com/api/amiibo/?name=mario"
 
-Autor: Victor Aldemar torres
+## Autor:
+Victor Aldemar torres
 
 14/05/2024
