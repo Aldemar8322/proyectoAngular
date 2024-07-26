@@ -1,0 +1,136 @@
+<form
+  [formGroup]="searchForm"
+  (ngSubmit)="handleSubmitSearch()"
+  class="my-5 d-flex"
+  role="search"
+>
+  <input
+    class="form-control me-2"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    formControlName="term"
+    (input)="handleInputSearch()"
+  />
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<hr />
+@if (caps.length > 0) {
+<div class="container d-flex flex-wrap justify-content-center gap-3">
+  @for (cap of caps; track $index) {
+  <div class="card text-center mb-3" style="width: 18rem;">
+    <div class="card">
+      <img
+        src="http://localhost:3000/imagenes/{{ cap.imagen }}"
+        class="card-img-top" height="350rem"
+        alt="imagen de una {{ cap.nombre }} {{ cap.precio }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ cap.nombre }} {{ cap.precio }}</h5>
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Basic mixed styles example"
+        >
+         <!--  <button type="button" class="btn btn-info" (click)="handleInfo()">
+            Info
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning"
+            (click)="handleUpdate()"
+          >
+            Update
+          </button> -->
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="handleDelete(cap._id)"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}@else{
+<p>No hay productos para mostrar</p>
+}
+<hr />
+<div class="d-lg-flex justify-content-center">
+  <form (ngSubmit)="handleSubmit()" class="py-5 col-lg-6">
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputName"
+        aria-describedby="nameHelp"
+        name="nombre"
+        [(ngModel)]="nombre"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputPrecio" class="form-label">Precio</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputColor"
+        aria-describedby="colorHelp"
+        name="color"
+        [(ngModel)]="color"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputSize" class="form-label">Contenido</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputTalla"
+        aria-describedby="tallaHelp"
+        name="talla"
+        [(ngModel)]="talla"
+      />
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="inputAvailable"
+          aria-describedby="availableHelp"
+          name="disponible"
+          [(ngModel)]="disponible"
+        />
+        <label class="form-check-label" for="inputAvailable">Disponible</label>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="inputAmount" class="form-label">Cantidad</label>
+      <input
+        type="number"
+        class="form-control"
+        id="inputAmount"
+        aria-describedby="amountHelp"
+        name="existencias"
+        [(ngModel)]="existencias"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="inputImage" class="form-label">Imagen</label>
+      <input
+        type="file"
+        class="form-control"
+        id="inputImage"
+        aria-describedby="imageHelp"
+        (change)="inputFile($event)"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary bg-my-color col-12">
+      Crear desayuno
+    </button>
+  </form>
+</div>

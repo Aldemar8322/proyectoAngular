@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-my-color margen fuente" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fuente" href="#">BREAKBEACH</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a routerLink="home" class="nav-link">INICIO</a>
+          <a routerLink="shop" class="nav-link">ADMINISTRADOR</a>
+        </div>
+      </div>
+    </div>
+    <div class="pe-3 text-white">
+      @if (loginService.isLogin()) {
+      <button type="button" class="btn btn-link" (click)="loginService.logout()">
+        Logout
+      </button>
+      } @else {
+      <a routerLink="login" class="nav-link fuente">Login</a>
+      }
+    </div>
+  </nav>

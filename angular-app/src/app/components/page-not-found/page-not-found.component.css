@@ -1,0 +1,19 @@
+.gradient{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 700px;
+    background: linear-gradient(45deg,#264653,#2A9D8F,#F4A261,#E76F51);
+    justify-content: center;
+    align-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nf{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50px;
+    color: #264653;
+}

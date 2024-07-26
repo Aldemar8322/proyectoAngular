@@ -1,0 +1,10 @@
+.carta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 200px;
+    width: 200px
+}

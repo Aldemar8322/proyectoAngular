@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+:root {
+  --my-color: #264653;
+}
+
+.cf-bold {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cf-regular {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-my-color {
+  background-color: var(--my-color);
+}
+
+.bg-f-c{
+  background-color: #e76f51;
+}
+.margen {
+  margin: 5px;
+}
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
